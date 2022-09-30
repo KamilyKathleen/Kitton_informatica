@@ -1,6 +1,7 @@
 from PyQt5 import uic, QtWidgets        # Importa a interface gráfica
 import mysql.connector      # Importa o conector do MySQL
-
+import sys 
+from cx_Freeze import setup, Executable
 
 conexao = mysql.connector.connect(      # variável que armazena o conector do MySql
     host = 'localhost',     # Host da database
@@ -121,7 +122,7 @@ def selecao_produto():
     cursor.execute("select codigo from produtos")   # Executa o comando select codigo do MySQL
     dados = cursor.fetchall()   # Variável que busca/guarda todos os dados da database
     valor_cod = dados[linha][0]
-    cursor.execute("select * from produtos where codigo = " + str(valor_cod))
+    cursor.execute("select * from produtos where codigo = '{}'".format(str(valor_cod)))
     selecionar = cursor.fetchall()
     kitton_configuracao.codigoPesquisa.setText(str(selecionar[0][0]))
     kitton_configuracao.nomeAlterar.setText(str(selecionar[0][1]))
@@ -139,7 +140,7 @@ def deleta_produtos():  # Deleta um registro na database
     cursor.execute("select codigo from produtos")   # Executa o comando select codigo do MySQL
     dados = cursor.fetchall()   # Variável que busca/guarda todos os dados da database
     valor_cod = dados[linha][0]
-    cursor.execute("delete from produtos where codigo = " + str(valor_cod)) # Executa o comando delete do MySQL
+    cursor.execute("delete from produtos where codigo = '{}'".format(str(valor_cod))) # Executa o comando delete do MySQL
     conexao.commit()    # Comita a conexão com a database
     kitton_configuracao.codigoPesquisa.setText("")  # Limpa o campo
     kitton_configuracao.nomeAlterar.setText("") # Limpa o campo
@@ -147,8 +148,26 @@ def deleta_produtos():  # Deleta um registro na database
     kitton_configuracao.fornecedorAlterar.setText("")   # Limpa o campo
     kitton_configuracao.custo_fabAlterar.setText("")    # Limpa o campo
     kitton_configuracao.funcionarioAlterar.setCurrentText("Selecione")   # Limpa o campo
-    kitton_configuracao.precoAlterar.setText("")    # Limpa o campo    
-   
+    kitton_configuracao.precoAlterar.setText("")    # Limpa o campo  
+    
+    
+def chama_vendas():  # Chama a tela de caixa
+    kitton_inicial.hide()   # Esconde a janela inicial
+    kitton_caixa.show()  # Mostra a janela de caixa
+    
+    
+def pesquisa_cod():     # NÃO ESTÁ FUNCIONANDO AINDA
+    cursor = conexao.cursor()   # Função cursor, faz a conexao com a database
+    linha = kitton_caixa.inputCod.text()
+    cursor.execute("select codigo from produtos")   # Executa o comando select codigo do MySQL
+    dados = cursor.fetchall()   # Variável que busca/guarda todos os dados da database
+    valor_cod = dados[linha][0]
+    cursor.execute("select nome, preco from produtos where codigo = '{}'".format(str(valor_cod)))
+    selecionar = cursor.fetchall()
+    kitton_caixa.inputCod.setText(str(selecionar[0][0]))
+    kitton_caixa.inputNome.setText(str(selecionar[0][1]))
+    kitton_caixa.inputPreco.setText(str(selecionar[0][6]))
+    
     
 def volta_produtos():   # Volta para a tela de produtos (gerenciamento de produtos)
     kitton_configuracao.hide()  # Esconde a janela de gerenciamento de produtos
@@ -157,6 +176,11 @@ def volta_produtos():   # Volta para a tela de produtos (gerenciamento de produt
 
 def volta_inicio_p():   # Volta para a tela inicial (cadastro de produtos)
     kitton_produtos.hide()  # Esconde a janela de cadastro de produtos
+    kitton_inicial.show()   # Mostra a janela inicial
+    
+
+def volta_inicio_v():   # Volta para a tela inicial (caixa)
+    kitton_caixa.hide()  # Esconde a janela de caixa
     kitton_inicial.show()   # Mostra a janela inicial
 
 
@@ -167,6 +191,7 @@ kitton_inicial = uic.loadUi('kitton_inicial.ui')    # Janela incial
 kitton_produtos = uic.loadUi('kitton_produtos.ui')  # Janela de cadastro de produtos
 kitton_configuracao = uic.loadUi('kitton_configuração.ui')  # Janela de gerenciamento de cadastro de produtos
 kitton_cadastro_c = uic.loadUi('kitton_cadastro.ui')    # Janela de cadastro de clientes
+kitton_caixa = uic.loadUi('kitton_caixa.ui')    # Janela de caixa
 # O que cada botão faz
 kitton_login_f.botaoEntrar.clicked.connect(chama_inicial)   # Abre a janela inicial ao clicar no botão entrar
 kitton_inicial.botaoProdutos.clicked.connect(chama_produtos)    # Abre a janela de cadastro de produtos
@@ -179,6 +204,9 @@ kitton_configuracao.botaoSelecionar.clicked.connect(selecao_produto)    # Seleci
 kitton_configuracao.botaoDeletar.clicked.connect(deleta_produtos)   # Deleta produtos da database
 kitton_configuracao.botaoVoltar.clicked.connect(volta_produtos)     # Volta para a janela de cadastro de produtos
 kitton_produtos.botaoInicioP.clicked.connect(volta_inicio_p)    # Volta para a janela inicial
+kitton_inicial.botaoVendas.clicked.connect(chama_vendas)    # Abre a janela de caixa
+kitton_caixa.botaoVoltar.clicked.connect(volta_inicio_v)    # Volta para a janela inicial
+kitton_caixa.botaoPesquisar.clicked.connect(pesquisa_cod)
 
 
 # Inicia o aplicativo
