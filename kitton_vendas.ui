@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kitton Informática - Vendas</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Logomarca Ícone.ico</normaloff>Logomarca Ícone.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(205, 240, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="titulo">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>10</y>
+      <width>621</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Print</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:30px;</string>
+    </property>
+    <property name="text">
+     <string>Kitton Informática</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputPesquisar">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>30</y>
+      <width>691</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Pesquisar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="img9">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>20</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:30px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Logomarca.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="img10">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>20</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:30px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Logomarca.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgHd">
+    <property name="geometry">
+     <rect>
+      <x>116</x>
+      <y>170</y>
+      <width>171</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/HD.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgSsd">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>180</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/SSD.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgRam">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>200</y>
+      <width>221</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Memória Ram.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgPlacaMae">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>170</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Placa mãe.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgMouse">
+    <property name="geometry">
+     <rect>
+      <x>1340</x>
+      <y>170</y>
+      <width>101</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Mouse.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgPlacaRede">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>190</y>
+      <width>241</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Placa de Rede.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgCaboRede">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>490</y>
+      <width>171</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Cabo de Rede.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgTeclado">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>500</y>
+      <width>231</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Teclado.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgMonitor">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>480</y>
+      <width>201</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Monitor.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgGabinete">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>470</y>
+      <width>111</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Gabinete.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgPendrive">
+    <property name="geometry">
+     <rect>
+      <x>1300</x>
+      <y>480</y>
+      <width>181</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Pendrive.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgFonte">
+    <property name="geometry">
+     <rect>
+      <x>1580</x>
+      <y>480</y>
+      <width>221</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Fonte de Alimentação.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgCaboVga">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>790</y>
+      <width>241</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Cabo VGA.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgCaboHdmi">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>790</y>
+      <width>171</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Cabo HDMI.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoHd">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>340</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>HDs</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoSsd">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>340</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>SSDs</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoRam">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>340</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Memórias RAM</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoPlacaMae">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>340</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Placas-mãe</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoMouse">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>340</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Mouses</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoPlacaRede">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>340</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Placas de Rede</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoFonte">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>660</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Fontes de Alimentação</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoPendrive">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>660</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Pendrives</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoGabinete">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>660</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Gabinetes</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoCaboHdmi">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>950</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Cabos HDMI</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoCaboVga">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>950</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Cabos VGA</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoMonitor">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>660</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Monitores</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoTeclado">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>660</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Teclados</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoCaboRede">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>660</y>
+      <width>240</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Cabos de Rede</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoMenuInicial">
+    <property name="geometry">
+     <rect>
+      <x>1440</x>
+      <y>20</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>MENU INICIAL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoMenuInicial_2">
+    <property name="geometry">
+     <rect>
+      <x>1690</x>
+      <y>20</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>CONTA</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionHD">
+   <property name="text">
+    <string>HD</string>
+   </property>
+  </action>
+  <action name="actionSSD">
+   <property name="text">
+    <string>SSD</string>
+   </property>
+  </action>
+  <action name="actionMem_ria_RAM">
+   <property name="text">
+    <string>Memória RAM</string>
+   </property>
+  </action>
+  <action name="actionPlama_m_e">
+   <property name="text">
+    <string>Plama-mãe</string>
+   </property>
+  </action>
+  <action name="actionMouse">
+   <property name="text">
+    <string>Mouse</string>
+   </property>
+  </action>
+  <action name="actionPlaca_de_Rede">
+   <property name="text">
+    <string>Placa de Rede</string>
+   </property>
+  </action>
+  <action name="actionCabo_de_Rede">
+   <property name="text">
+    <string>Cabo de Rede</string>
+   </property>
+  </action>
+  <action name="actionTeclado">
+   <property name="text">
+    <string>Teclado</string>
+   </property>
+  </action>
+  <action name="actionMonitor">
+   <property name="text">
+    <string>Monitor</string>
+   </property>
+  </action>
+  <action name="actionGabinete">
+   <property name="text">
+    <string>Gabinete</string>
+   </property>
+  </action>
+  <action name="actionPendrive">
+   <property name="text">
+    <string>Pendrive</string>
+   </property>
+  </action>
+  <action name="actionFonte_de_Alimenta_o">
+   <property name="text">
+    <string>Fonte de Alimentação</string>
+   </property>
+  </action>
+  <action name="actionCabo_VGA">
+   <property name="text">
+    <string>Cabo VGA</string>
+   </property>
+  </action>
+  <action name="actionCabo_HDMI">
+   <property name="text">
+    <string>Cabo HDMI</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

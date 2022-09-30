@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kitton Informática - Produtos</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Imagens/Logomarca Ícone.ico</normaloff>Imagens/Logomarca Ícone.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(205, 240, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="titulo">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>100</y>
+      <width>1171</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Print</family>
+      <pointsize>50</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:40px;</string>
+    </property>
+    <property name="text">
+     <string>Cadastro de Produtos</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoCadProd">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>740</y>
+      <width>410</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:40px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>CADASTRAR PRODUTO</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>380</y>
+      <width>381</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="nome">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">nome
+</string>
+       </property>
+       <property name="text">
+        <string>Nome</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="inputNome">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="categoria">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Categoria</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="inputCategoria">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Selecione</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>HD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SSD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Memória Ram</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Placa-mãe</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mouse</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Teclado</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Monitor</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Gabinete</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pendrive</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fonte de Alimentação</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cabo VGA</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cabo HDMI</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Placa de Rede</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cabo de Rede</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="fornecedor">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Fornecedor</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="inputFornecedor">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="custoFabrica">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Custo de Fábrica</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="inputCustoFab">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="funcionario">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Funcionário</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QComboBox" name="inputFuncionario">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Selecione</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Kamily Kathleen</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bruno Rangel</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ana Caroline</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fernanda Tayná</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Matheus Souza</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="valorVenda">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Valor de Venda</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="inputPreco">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="img3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>104</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:40px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Logomarca.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="img4">
+    <property name="geometry">
+     <rect>
+      <x>1430</x>
+      <y>104</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:40px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagens/Logomarca.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoInicioP">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>740</y>
+      <width>410</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:40px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>VOLTAR PARA O INÍCIO</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoConfiguracao">
+    <property name="geometry">
+     <rect>
+      <x>1330</x>
+      <y>740</y>
+      <width>121</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(0, 0, 170);
+color: rgb(255, 255, 255);
+border-radius:40px;
+}
+QPushButton:hover{
+background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Imagens/Engrenagem.png</normaloff>Imagens/Engrenagem.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
